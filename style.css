@@ -2107,15 +2107,16 @@ footer {
   height: 32px;
   justify-content: center;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar-vertical {
-    transition: left 0.3s;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 9999;
+    display: none !important;
   }
-  .navbar-vertical.hide-on-scroll {
-    left: -120px; /* Adjust based on your navbar width */
+}@media screen and (max-width: 998px) {
+  .navbar {
+    display: none !important;
+  }
+  .hamburger,
+  .mobiletogglemenu {
+    display: flex !important;
   }
 }
